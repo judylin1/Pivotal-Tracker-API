@@ -6,3 +6,42 @@ body {
 a {
   color: #00B7FF;
 }
+
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+  width: 100%;
+}
+
+td {
+  border-left:1px solid black;
+  padding: 5px;
+  text-align: left;
+}
+
+th {
+  border-left:1px solid black;
+  background-color: #C0C0C0;
+  padding: 1px;
+}
+
+tr:nth-child(odd) {
+    background-color: #E8E8E8;
+}
+
+.center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.length {
+  width: 250px;
+  border: 1px black solid;
+}
+
+.button {
+  border: 1px solid black;
+}
