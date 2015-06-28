@@ -1,12 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var unirest = require('unirest');
-var project_id = process.env.PROJECT_ID;
 
 // defining a route
 // _when_ someone makes a request to this site, with the path /, _then_, run this function
 router.get('/', function(req, res, next) {
-
   unirest.get('https://www.pivotaltracker.com/services/v5/projects/1374616/stories')
   .headers('X-TrackerToken', process.env.PIVOTAL_TRACKER)
   .end(function (response) {
@@ -15,7 +13,6 @@ router.get('/', function(req, res, next) {
       response: response.body
     });
   });
-
 });
 
 router.post('/', function(req, res, next) {
